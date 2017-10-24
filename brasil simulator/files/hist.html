@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<audio src="files/maurice lessing adventure.mp3" autoplay loop></audio>
+	<meta charset="utf-8">
+	<title>Historia grande gostosa</title>
+	<script type="text/javascript">
+		function rite() {
+			document.getElementById('div0').style.display = "none";
+			document.getElementById('div1').style.display = "initial";
+		}
+		function rite2() {
+			document.getElementById('div1').style.display = "none";
+			document.getElementById('div2').style.display = "initial";
+		}
+		function rite3() {
+			document.getElementById('div2').style.display = "none";
+			document.getElementById('div3').style.display = "initial";
+		}
+		function rite4() {
+			document.getElementById('div3').style.display = "none";
+			document.getElementById('div4').style.display = "initial";
+		}
+		function rite5() {
+			document.getElementById('div4').style.display = "none";
+			document.getElementById('div5').style.display = "initial";
+		}
+		function rite6() {
+			alert("O jogo vai começar\nJogue limpo\n  Bom jogo");
+			window.open("jogo.html", "_self");
+		}
+	</script>
+</head>
+<body>
+	<center>
+	<div id="div0">
+		<img src="files/br.png">
+		<br><br>
+		<p>Em um lugar no mundo existia um lugar chamado de terra da corrupçã... BRASIL! Era um lugar bonito pra caramba</p>
+		<br><br>
+		<button onclick="rite()">proximo</button>
+	</div>
+	
+	<div id="div1" style="display: none;">
+		<center>
+		<img src="files/br2.png"><br><br><p>Nesse lugar existia vc</p><br><br><button onclick="rite2()">proximo</button>
+		</center>
+	</div>
+	<div id="div2" style="display: none;">
+		<center><img src="files/vc.png"><br><br><p>Vc era uma cara muito rico e feliz. tinha uma casa e só. <br> MASSS...</p><br><br><button onclick="rite3()">proximo</button></center>
+	</div>
+	<div id="div3" style="display: none;">
+		<img src="files/exp.png">
+		<br><br>
+		<p>Do nada a sua cidade explodiu :(</p>
+		<br><br>
+		<button onclick="rite4()">proximo</button>
+	</div>
+	<div id="div4" style="display: none;">
+		<img src="files/nao.png">
+		<br><br>
+		<p>vc foi o único que sobreviveu, mas estavava pobre de novo entao teria que se virar pra sobreviver ;-;</p>
+		<br><br>
+		<button onclick="rite5()">proximo</button>
+	</div>
+	<div id="div5" style="display: none;">
+		<img src="files/curitiba.png">
+		<br><br>
+		<p>Mas vc achou um lugar incrivel </p>
+		<br><br>
+		<button onclick="rite6()">proximo</button>
+	</div>
+	</center>
+</body>
+</html>

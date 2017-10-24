@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<audio id="aud" src="files/Vexento - Home.mp3"></audio>
+	<title>Brasil simulator</title>
+	<meta charset="utf-8">
+	<!-- Script -->
+	<script type="text/javascript">
+		
+		var clicks = 0;
+		var fome = 100;
+
+		function se() {
+			if (clicks >= 50) {
+			document.getElementById("bt2").onclick = up2;
+			document.getElementById("bt2").style.opacity = 100;
+			document.getElementById("bt2").style.cursor = "default";
+			
+			}
+			
+			
+			if (clicks >= 2000) {
+				document.getElementById("bt3").onclick = up3;
+				document.getElementById("bt3").style.opacity = 100;
+				document.getElementById("bt3").style.cursor = "default";
+			}
+
+			if (clicks >= 200) {
+				document.getElementById("status").src = "files/soso.png";
+				document.getElementById("statust").innerHTML = "Menos pobre"
+			}
+			if (clicks >= 1000) {
+				document.getElementById("status").src = "files/clm.png";
+				document.getElementById("statust").innerHTML = "Classe média"
+			}
+			if (clicks >= 2000) {
+				document.getElementById("status").src = "files/riquinho.png";
+				document.getElementById("statust").innerHTML = "Riquinho"
+			}
+			if (clicks >= 5000) {
+				document.getElementById("status").src = "files/rico.png";
+				document.getElementById("statust").innerHTML = "Rico"
+			}
+			if (clicks >= 40000) {
+				document.getElementById("status").src = "files/ricao.webp";
+				document.getElementById("statust").innerHTML = "Ricão"
+			}
+		}
+		function se2() {
+			if (clicks >= 50) {
+			document.getElementById("bt2").onclick = up2d;
+			document.getElementById("bt2").style.opacity = 100;
+			document.getElementById("bt2").style.cursor = "default";
+			
+			}
+			
+			
+			if (clicks >= 2000) {
+				document.getElementById("bt3").onclick = up3d;
+				document.getElementById("bt3").style.opacity = 100;
+				document.getElementById("bt3").style.cursor = "default";
+			}
+
+			if (clicks >= 200) {
+				document.getElementById("status").src = "files/soso.png";
+				document.getElementById("statust").innerHTML = "Menos pobre"
+			}
+			if (clicks >= 1000) {
+				document.getElementById("status").src = "files/clm.png";
+				document.getElementById("statust").innerHTML = "Classe média"
+			}
+			if (clicks >= 2000) {
+				document.getElementById("status").src = "files/riquinho.png";
+				document.getElementById("statust").innerHTML = "Riquinho"
+			}
+			if (clicks >= 5000) {
+				document.getElementById("status").src = "files/rico.png";
+				document.getElementById("statust").innerHTML = "Rico"
+			}
+			if (clicks >= 40000) {
+				document.getElementById("status").src = "files/ricao.webp";
+				document.getElementById("statust").innerHTML = "Ricão"
+			}
+		}
+
+		function zerar() {
+			if (clicks >= 1000000) {
+				window.close();
+				window.open("final.html", "", "width=1000px,height=900px,left=500px,toolbar=no,menubar=no");
+
+				document.getElementById("cont").style.display = "initial";
+			}
+			else {
+				alert("C num tem dinheiroooooo aaa");
+			}
+		}
+		function trevo() {
+			if (clicks >= 2500) {
+					alert("agora oque vc ganha de dinheiro passa a ser o dobro :)");
+				//1
+				document.getElementById("plnt").style.display = "none";
+				document.getElementById("bt2").onclick = up2d;
+				
+				//2
+				document.getElementById("bt").onclick = upd;
+				
+				//3
+				document.getElementById("bt3").onclick = up3d;
+				
+				//---
+				clicks -= 2500;
+				document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+
+			}
+			else {
+				alert("vc não tem dinheiro suficiente");
+			}
+
+		}
+		function up() {
+			clicks++;
+			setInterval(ola2, 1000);
+			document.getElementById("bt").onclick = upmsm;
+			document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+						se();
+			
+
+		}
+
+		function upmsm() {
+			clicks++;
+			document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+						se();
+		}
+		function up2() {
+			clicks += 50;
+			document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+						se();
+			
+		}
+
+		function ola2() {
+			if (fome == 0) {
+				alert("acabou sua fome");
+				alert("C morreu");
+				window.close();
+			}
+
+			else if (fome > 100) {
+				fome = 101;
+			}
+
+			fome--;
+			document.getElementById("fome").innerHTML = "<span style='color: red;'>" + fome + "/100" + "</span>";
+		}
+
+		function up3() {
+			clicks += 1000;
+			document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+			se();
+			
+		}
+		function upd() {
+			clicks += 2;
+			document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+						se2();
+			
+
+		}
+
+		function up2d() {
+			clicks += 100;
+			document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+						se2();
+			
+		}
+
+		function up3d() {
+			clicks += 2000;
+			document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks  + "</span>" + " dinheiros";
+						se2();
+			
+		}
+		
+
+		//barraca ↓
+
+		
+
+		function enf() {
+			if (clicks >= 30) {
+				document.getElementById("felps").style.display = "initial";
+				document.getElementById("enf").style.display = "none";
+				clicks -= 30
+				document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+			}
+				else {
+					alert("vc n tem dinheiros suficiente");
+				}
+
+			}
+			function dlc() {
+			if (clicks >= 90500) {
+				clicks *= 3;
+				alert("que deliiiiiiicia cara");
+				clicks -= 90500;
+				document.getElementById("dlc").style.display = "none";
+				document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+			}
+				else {
+					alert("vc n tem dinheiros suficiente");
+				}
+
+			}
+
+			function sdm() {
+				if (clicks >= 10) {
+					clicks -= 10;
+				document.getElementById("sdm").style.display = "none";
+				document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+				alert("Vc tomou tanto suco que explodiu");
+				alert("C morreu");
+				window.close();
+				}
+
+				else {
+					alert(";-; vc n tem dinheiro nem para um suco de maracujá ;-;");
+				}
+			}
+
+
+			//continuar? ↓
+
+
+			function sim() {
+				document.getElementById("cont").style.display = "none";
+			}
+			function nao() {
+				window.close();
+			}
+			function ola() {
+				alert("kji9hbnr9i");
+			}
+
+			function fome() {
+				alert("pola");
+				document.getElementById("fome").innerHTML = fome + "/100";
+			}
+			//continuar? ↑
+
+		//-------------
+
+			//alimento ↓
+			function pao() {
+				if (clicks >= 2) {
+					clicks -= 2;
+					fome += 3;
+					alert("vc come um pao");
+					document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+				}
+
+				else {
+					alert(";-; vc é pobre pra caramba");
+				}
+			}
+
+			function trt() {
+				if (clicks >= 30) {
+					clicks -= 30;
+					fome += 10;
+					alert("vc come uma torta");
+					document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+				}
+
+				else {
+					alert(";-; vc é pobre pra caramba");
+				}
+			}
+
+			function gdcyt() {
+				clicks += 100;
+				document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+			}
+
+			function yt() {
+				if (clicks >= 7000) {
+					clicks -= 7000;
+					alert("vc cria um canal no youtube");
+					setInterval(gdcyt, 500);
+					document.getElementById("grv").style.display = "initial";
+					document.getElementById("yt").style.display = "none";
+					document.getElementById('demo').innerHTML = "Você tem  " + "<span style='color: green;'>" + clicks + "</span>" + " dinheiros";
+				}
+
+				else {
+					alert(";-; c ainda n tem dinheiros");
+				}
+			}
+			
+		
+	</script>
+
+	<!-- ↓ Style ↓ -->
+	<style type="text/css">
+
+		body {
+			zoom: 95%;
+		}
+		#bt2 {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+		#bt3 {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+		p {
+			font-family: Arial;
+		}
+
+		#cont {
+			display: none;
+			padding: 70px 0;
+		}
+	</style>
+
+</head>
+<body>
+		<p id="demo">Você tem <span style='color: green;'>0</span>  dinheiros</p><span id="grv" style="display: none; font-family: Arial">+ <img src="files/810.gif" width="15px" height="15px"> gravando vídeos</span><br>
+
+	<pre>Fome: <p id="fome">100/100</p></pre>
+	<div align="right">
+		<img id="felps" style="display: none;" src="files/felps.png" width="70px" height="70px">
+	</div>
+	
+	<!-- ↓ status ↓ -->
+
+	<center>
+		<img id="status" src="files/pobre.png" width="50px" height="50px"><p id="statust">Pobre</p><br>
+	</center>
+
+	<!-- ↑ status ↑ -->
+
+	<!-- ↓ botões ↓ -->
+	<div id="cont" align="center">
+
+<center>
+	<h1>Continuar?</h1>
+		<button onclick="sim()">ss</button><button onclick="nao()">Ñ</button>
+</center>
+		
+
+
+	</div>
+<button id="bt" onclick="up();">Trabalhar</button><br><br>
+<button id="bt2" onclick='alert("vc precisa de 50 dinheiros");'>Roubar</button><br><br>
+<button id="bt3" onclick='alert("vc precisa de 2000 dinheiros");'>Hackear bancos</button>
+<!-- --fim dos botões--  -->
+<br><br>
+<p>Barraca do seu José ↓</p>
+<br><br>
+
+<!-- ↓ ofertas ↓ -->
+<ul>
+
+
+
+
+	<li><button id="pao" onclick="pao()"><img src="files/4.png" width="50px" height="50px">Pão($2) | Restaura 2 da sua fome</button></li><br>
+
+
+	<li><button id="trt" onclick="trt()"><img src="files/torta.jpg" width="30px" height="30px">Torta de não sei oque($30 eu sei que tá caro não reclama) | Restaura 10 da sua fome</button></li><br>
+
+
+	<li><button id="plnt" onclick="trevo()"><img src="files/trevo.jpg" width="20px" height="20px">Trevo da sorte($2500) | Duplica o seu dinheiro</button><br><br></li>
+
+
+
+	<li><button id="enf" onclick="enf()">Enfeite legal($30) | ...Enfeite...</button></li><br>
+
+
+
+	<li><button id="dlc" onclick="dlc()"><img src="files/delicia.png" width="80px" height="80px">Margarina Delíiiiiicia cara($90500) | Triplica o seu dinheiro (somente oq vc tem no momento), ai que delícia cara</button></li><br>
+
+
+
+	<li><button id="sdm" onclick="sdm()"><img src="files/maracuja.png" width="40px" height="40px">Suco de maracujá($10) | Quem não tomou agora vai tomar</button></li><br> <br>
+
+
+	<li><button id="yt" onclick="yt()"><img src="files/yt.png" width="30px" height="30px">Criar um canal no youtube($7000 cala a boca aqui vc paga pra criar canal) | Vc ganha 100 dinheiros a cada segundo</button></li><br>
+
+
+
+	<li><button onclick="document.getElementById('aud').play();"><img src="files/unnamed.png" width="20px" height="20px">Música Relaxante pra caramba($GRÁTIS) | Vexento - Home</button></li><br>
+
+
+
+	<li><button onclick="zerar()"><img src="files/0.jpg" width="40px" height="40px">Zerar o jogo($1000000)</button></li>
+
+
+</ul>
+<br><br><br><br><br>
+<p>By Magoninho</p>
+</body>
+</html>
